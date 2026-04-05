@@ -1,0 +1,28 @@
+# Models & Large Binaries
+/models/
+/lora/
+/output_run/
+
+# Specific ignores
+*.png
+output_*.txt
+execution_target.json
+/prompts/
+
+# Python
+__pycache__/
+venv/
+*.pyc
+.ipynb_checkpoints
+
+# Rust
+/target/
+Cargo.lock
+
+# Environment
+.env
+model_mapping.json
+lora_triggers.json
+/legacy/
+/legacy/
+/legacy/

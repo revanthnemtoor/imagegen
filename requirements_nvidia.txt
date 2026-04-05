@@ -1,0 +1,17 @@
+# requirements_nvidia.txt
+# Optimized for RTX 3050 (4GB) and NVIDIA CUDA High performance systems
+
+torch==2.3.1
+torchvision==0.18.1
+torchaudio==2.3.1
+xformers>=0.0.26.post1
+diffusers>=0.29.0
+transformers>=4.41.0
+accelerate>=0.30.0
+sentencepiece
+protobuf
+inquire
+questionary
+pillow
+numpy<2.0.0
+psutil
