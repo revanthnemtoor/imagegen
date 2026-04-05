@@ -5,7 +5,7 @@ import random
 import torch
 import traceback
 import sys
-import readchar
+# import readchar - REMOVED FOR HEADLESS
 from datetime import datetime
 from PIL import Image
 
@@ -26,7 +26,7 @@ from diffusers import (
     FlowMatchEulerDiscreteScheduler
 )
 
-import questionary
+# import questionary - REMOVED FOR HEADLESS
 
 def scan_models():
     return sorted([f for f in os.listdir(config.MODEL_DIR) if f.endswith((".safetensors", ".ckpt"))])
