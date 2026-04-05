@@ -51,8 +51,10 @@ case $GPU_TYPE in
         pip install -r requirements_nvidia.txt
         ;;
     "RADEON")
-        echo -e "${YELLOW}📦 Installing AMD RADEON ROCm Dependencies...${NC}"
+        echo -e "${YELLOW}📦 Rolling back to Stable AMD RADEON ROCm Dependencies...${NC}"
         pip install --upgrade pip
+        # Clear the buggy 0.37+ / 5.5+ versions if active
+        pip uninstall -y diffusers transformers accelerate torch torchvision torchaudio 2>/dev/null
         pip install -r requirements_radeon.txt
         
         # New automated fix for Arch binary compatibility
