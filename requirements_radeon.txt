@@ -1,17 +1,17 @@
 # requirements_radeon.txt
 # Optimized for AMD RX 6600 (8GB) and Radeon ROCm systems
+# Required: Torch >= 2.4 for Transformers 5.x support
 
 --extra-index-url https://download.pytorch.org/whl/rocm6.0
-torch==2.3.0+rocm6.0
-torchvision==0.18.0+rocm6.0
-torchaudio==2.3.0+rocm6.0
+torch==2.4.1+rocm6.0
+torchvision==0.19.1+rocm6.0
+torchaudio==2.4.1+rocm6.0
 # xformers excluded for ROCm compatibility
-diffusers>=0.29.0
-transformers>=4.41.0
-accelerate>=0.30.0
+diffusers>=0.37.0
+transformers>=4.44.0
+accelerate>=0.33.0
 sentencepiece
 protobuf
-inquire
 questionary
 pillow
 numpy<2.0.0
