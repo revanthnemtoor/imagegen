@@ -54,6 +54,12 @@ case $GPU_TYPE in
         echo -e "${YELLOW}📦 Installing AMD RADEON ROCm Dependencies...${NC}"
         pip install --upgrade pip
         pip install -r requirements_radeon.txt
+        
+        # New automated fix for Arch binary compatibility
+        if [ -f "fix_rocm_libs.sh" ]; then
+            chmod +x fix_rocm_libs.sh
+            ./fix_rocm_libs.sh
+        fi
         ;;
     *)
         echo -e "${RED}⚠️ UNKNOWN GPU DETECTED.${NC}"
